@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfed9bf-f95c-4991-b6fa-217510c5a34a" name="更改" comment="第一周" />
+    <list default="true" id="6bfed9bf-f95c-4991-b6fa-217510c5a34a" name="更改" comment="第一周">
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774107120820</updated>
-      <workItem from="1774107123214" duration="1454000" />
+      <workItem from="1774107123214" duration="1759000" />
     </task>
     <task id="LOCAL-00001" summary="第一周">
       <option name="closed" value="true" />
