@@ -11,13 +11,4 @@
 
 3. 技术栈
 使用了Java17、mybatis-plus框架、Maven……
-* ![图片](https://pic.kts.g.mi.com/2de37e4d2cb534929a05e15469b4512f3219166778173505434.jpg)
-## 第一周的相关工作
-
-1. 设计数据库表结构
-2. 搭建项目框架，编写了登录注册功能、修改密码功能
-3. 学生功能：绑定宿舍、创建保修单、取消保修单
-
-
-## 第二周的相关工作
-1. a
+* ![图片](https://tse2.mm.bing.net/th/id/OIP.xKqryABBvNg7IRvqdDDjrwHaGv?rs=1&pid=ImgDetMain&o=7&rm=3)
