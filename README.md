@@ -11,4 +11,4 @@
 
 3. 技术栈
 使用了Java17、mybatis-plus框架、Maven……
-![图片](https://pic.kts.g.mi.com/2de37e4d2cb534929a05e15469b4512f3219166778173505434.jpg)
+* ![图片](https://pic.kts.g.mi.com/2de37e4d2cb534929a05e15469b4512f3219166778173505434.jpg)
