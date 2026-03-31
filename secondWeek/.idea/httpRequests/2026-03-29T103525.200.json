@@ -1,0 +1,18 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "user": {
+      "id": 1,
+      "username": "3125004123",
+      "password": "$2a$10$MmA4M1vyVtRKHTaIHhP7nes4n/jl/vE8z2aRM2o.QD.9KaHOBmbU.",
+      "role": 1,
+      "name": "五成天",
+      "dormBuilding": "3号楼",
+      "dormRoom": "101",
+      "createTime": "2026-03-21T16:02:19.000+00:00",
+      "updateTime": "2026-03-21T16:02:19.000+00:00"
+    },
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInJvbGUiOjEsImlhdCI6MTc3NDc1MTcyNSwiZXhwIjoxNzc0ODM4MTI1fQ.Dh29Hz2iQDNkGb3ZdXxDXB63coO8-wss2JllDexNprE"
+  }
+}

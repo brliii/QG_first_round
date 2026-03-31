@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81698bfc-ae07-48ce-90d9-eed64ef3cd58" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/utils/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/AdminOrders.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/StudentHome.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/StudentOrders.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/common/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/constant/OrderStatusConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/constant/RoleConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/dao/RepairOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/dao/RepairUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/dto/CreateOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/dto/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/entity/RepairOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/entity/RepairUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/interceptor/AuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/service/RepairOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/service/impl/RepairOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repair-backend/test.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstWeek/dorm_repair_system/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../firstWeek/dorm_repair_system/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/RepairBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-backend/src/main/java/com/example/dormrepair/RepairBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-backend/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/repair-backend/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repair-backend/src/test/java/com/example/RepairBackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/repair-backend/src/test/java/com/example/dormrepair/RepairBackendApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_D:/github_repository/QG_first_round/secondWeek" value="3BZjwVVkQAbtZcCwgsNHySYuN9U" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Composition API Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;brliii&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/brliii/QG_first_round.git&quot;,
+    &quot;accountId&quot;: &quot;eb38451d-af7c-489c-938d-11cd5e3c3b7a&quot;
+  }
+}</component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3BZjwVVkQAbtZcCwgsNHySYuN9U" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP 请求.test | 学生登录（获取token）.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.RepairBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/github_repository/QG_first_round/secondWeek&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\develop\\IDEA\\IntelliJ IDEA 2025.2.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.RepairBackendApplication.executor&quot;: &quot;Run&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
+    ]
+  }
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="test | 学生登录（获取token）" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP 请求.test | 学生登录（获取token）">
+    <configuration name="test | 学生登录（获取token）" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/repair-backend/test.http" executionIdentifier="学生登录（获取token）" index="2" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="RepairBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="repair-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.dormrepair.RepairBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP 请求.test | 学生登录（获取token）" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="81698bfc-ae07-48ce-90d9-eed64ef3cd58" name="更改" comment="" />
+      <created>1774703725671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774703725671</updated>
+      <workItem from="1774703726996" duration="49000" />
+      <workItem from="1774709648179" duration="655000" />
+      <workItem from="1774744803171" duration="310000" />
+      <workItem from="1774745129532" duration="10010000" />
+      <workItem from="1774765861829" duration="8489000" />
+      <workItem from="1774776253076" duration="401000" />
+      <workItem from="1774860580315" duration="8861000" />
+      <workItem from="1774938725670" duration="526000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

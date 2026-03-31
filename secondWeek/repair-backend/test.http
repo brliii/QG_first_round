@@ -1,0 +1,116 @@
+### 测试注册
+POST http://localhost:8080/api/user/register
+Content-Type: application/json
+
+{
+  "name": "张三",
+  "username": "31250001",
+  "password": "123456",
+  "confirmPassword": "123456",
+  "role": 1
+}
+
+### 学生登录（获取token）
+POST http://localhost:8080/api/user/login
+Content-Type: application/json
+
+{
+  "username": "3125004123",
+  "password": "123"
+}
+
+### 管理员登录（获取token）
+POST http://localhost:8080/api/user/login
+Content-Type: application/json
+
+{
+  "username": "0025004123",
+  "password": "123"
+}
+
+### 获取当前用户信息
+GET http://localhost:8080/api/user/info
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsInJvbGUiOjEsImlhdCI6MTc3NDY2NDgyMSwiZXhwIjoxNzc0NzUxMjIxfQ.AC0sdXUlQl6KCOgdObDMiUpV0gNBxRrU63sCAF2DlpM
+
+### 创建保修单（带图片）
+POST http://localhost:8080/api/order/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsInJvbGUiOjEsImlhdCI6MTc3NDY2NDgyMSwiZXhwIjoxNzc0NzUxMjIxfQ.AC0sdXUlQl6KCOgdObDMiUpV0gNBxRrU63sCAF2DlpM
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="deviceType"
+
+空调
+------WebKitFormBoundary
+Content-Disposition: form-data; name="description"
+
+不制冷
+------WebKitFormBoundary
+Content-Disposition: form-data; name="priority"
+
+2
+------WebKitFormBoundary
+Content-Disposition: form-data; name="image"; filename="test.jpg"
+Content-Type: image/jpeg
+
+< ./test.jpg
+------WebKitFormBoundary--
+
+
+### 创建保修单（不带图片）
+POST http://localhost:8080/api/order/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsInJvbGUiOjEsImlhdCI6MTc3NDY2NDgyMSwiZXhwIjoxNzc0NzUxMjIxfQ.AC0sdXUlQl6KCOgdObDMiUpV0gNBxRrU63sCAF2DlpM
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="deviceType"
+
+空调
+------WebKitFormBoundary
+Content-Disposition: form-data; name="description"
+
+不制冷
+------WebKitFormBoundary
+Content-Disposition: form-data; name="priority"
+
+2
+------WebKitFormBoundary--
+
+### 获取当前用户的所以保修单
+GET http://localhost:8080/api/order/user/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsInJvbGUiOjEsImlhdCI6MTc3NDY4MzU3NiwiZXhwIjoxNzc0NzY5OTc2fQ.sHSPT2Y6UbGjk2-w3lT1L4SXP-9ypuo_DVHf8QTk8RQ
+
+
+### 取消保修单
+PUT http://localhost:8080/api/order/3/cancel
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjMsInJvbGUiOjEsImlhdCI6MTc3NDY4MzU3NiwiZXhwIjoxNzc0NzY5OTc2fQ.sHSPT2Y6UbGjk2-w3lT1L4SXP-9ypuo_DVHf8QTk8RQ
+
+### 管理员查看所有保修单
+GET http://localhost:8080/api/order/admin/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsInJvbGUiOjIsImlhdCI6MTc3NDY4NDc0MCwiZXhwIjoxNzc0NzcxMTQwfQ.vLXfN2Zt3ALELidee67W_F4ne5H8kC7QLa-o4I-w5ak
+
+### 管理员按状态查询
+GET http://localhost:8080/api/order/admin/list?status=0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsInJvbGUiOjIsImlhdCI6MTc3NDY4NDg2MiwiZXhwIjoxNzc0NzcxMjYyfQ.d0PP6AKO_3VGov-OmcUEGxCm3nDiMMZzPzIo-GmqvlM
+
+### 学生绑定宿舍
+PUT http://localhost:8080/api/user/bindDorm?building=3号楼&room=101
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInJvbGUiOjEsImlhdCI6MTc3NDY4NTgxNCwiZXhwIjoxNzc0NzcyMjE0fQ.bD3BkUu-3IwjTNChZEr43RyKbAJBK3gtrwdYvonipRI
+
+### 学生查看自己的报修单详情（id=1）
+GET http://localhost:8080/api/order/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInJvbGUiOjEsImlhdCI6MTc3NDY4NjgwMSwiZXhwIjoxNzc0NzczMjAxfQ.QuXzLZFoZwZGZn2pyuWDAk_W9jtnD___6jJgMQgqFj8
+
+### 管理员查看任何报修单详情
+GET http://localhost:8080/api/order/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsInJvbGUiOjIsImlhdCI6MTc3NDY4Njg5MywiZXhwIjoxNzc0NzczMjkzfQ.PBme-YYxAw3aRpbI2mNIvuN1jCMFB9IQBAklQ7w2eso
+
+### 管理员修改报修单状态
+PUT http://localhost:8080/api/order/admin/status/4?newStatus=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsInJvbGUiOjIsImlhdCI6MTc3NDY4ODE5NSwiZXhwIjoxNzc0Nzc0NTk1fQ.qQBNWKWYlmiKiO3okXGh1w2F3bo0W30vE4IhjOtRMw0
+
+### 管理员删除报修单
+DELETE http://localhost:8080/api/order/admin/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsInJvbGUiOjIsImlhdCI6MTc3NDY4ODE5NSwiZXhwIjoxNzc0Nzc0NTk1fQ.qQBNWKWYlmiKiO3okXGh1w2F3bo0W30vE4IhjOtRMw0
+
+

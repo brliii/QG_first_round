@@ -1,3 +1,22 @@
+#配置文件
 spring:
-  application:
-    name: repair-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/dorm_repair?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  type-aliases-package: com.example.dormrepair.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+jwt:
+  secret: "mySecretKeyForJWTGeneration1234567890!@#$%^&*()"
+  expiration: 86400000  #24小时国旗
+
+upload:
+  path: D:/uploads
+
+server:
+  port: 8080
