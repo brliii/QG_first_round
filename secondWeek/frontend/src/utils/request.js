@@ -5,7 +5,7 @@ const instance = axios.create({
     timeout: 10000,
 })
 
-// 请求拦截器：自动添加 token
+//请求拦截器，自动添加token
 instance.interceptors.request.use(
     config => {
         const token = localStorage.getItem('token')
@@ -17,7 +17,7 @@ instance.interceptors.request.use(
     error => Promise.reject(error)
 )
 
-// 响应拦截器：处理 401 等
+//响应拦截器，处理401等
 instance.interceptors.response.use(
     response => response.data,
     error => {

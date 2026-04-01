@@ -1,8 +1,11 @@
 # 宿舍保修管理系统
 [第一周相关源文件](https://github.com/brliii/QG_first_round/tree/master/firstWeek/dorm_repair_system)：主要的内容都在src/main里面
+[第二周相关源文件](https://github.com/brliii/QG_first_round/tree/master/secondWeek)
+
 
 1. 简介：
 本项目是宿舍保修管理系统，包含学生和管理员/维修人员两种身份，实现了许多功能。
+（第二周有更具体的介绍在第二周的README中）
 
 2. 功能介绍
 * 登录注册功能、修改密码

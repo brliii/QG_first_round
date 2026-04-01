@@ -8,7 +8,15 @@
       <option value="2">已完成</option>
       <option value="3">已取消</option>
     </select>
+    <select v-model="filterPriority">
+      <option value="">全部优先级</option>
+      <option value="1">低</option>
+      <option value="2">中</option>
+      <option value="3">高</option>
+    </select>
     <button @click="fetchOrders">查询</button>
+  </div>
+
     <div v-for="order in orders" :key="order.id" style="border:1px solid #ccc; margin:10px 0; padding:10px;">
       <div>ID: {{ order.id }} - 用户: {{ order.userId }}</div>
       <div>设备：{{ order.deviceType }}</div>
@@ -22,7 +30,6 @@
       </select>
       <button @click="deleteOrder(order.id)">删除</button>
     </div>
-  </div>
 </template>
 
 <script setup>
@@ -31,17 +38,19 @@ import request from '@/utils/request'
 
 const orders = ref([])
 const filterStatus = ref('')
+const filterPriority = ref('')
 const statusMap = { 0: '待处理', 1: '处理中', 2: '已完成', 3: '已取消' }
 const priorityMap = { 1: '低', 2: '中', 3: '高' }
 
 const fetchOrders = async () => {
-  const params = filterStatus.value ? { status: filterStatus.value } : {}
+  const params = {}
+  if (filterStatus.value !== '') params.status = filterStatus.value
+  if (filterPriority.value !== '') params.priority = filterPriority.value
   const res = await request.get('/api/order/admin/list', { params })
   if (res.code === 200) {
     orders.value = res.data.map(o => ({ ...o, newStatus: o.status }))
   }
 }
-onMounted(fetchOrders)
 
 const updateStatus = async (orderId, newStatus) => {
   const res = await request.put(`/api/order/admin/status/${orderId}`, null, {

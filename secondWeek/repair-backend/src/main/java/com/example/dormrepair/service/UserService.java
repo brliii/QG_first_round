@@ -19,5 +19,4 @@ public interface UserService {
     //绑定宿舍
     boolean bindDorm(int userId,String building,String room);
 
-
 }

@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController//返回json数据给前段
-@RequestMapping("/api/order")//所有方法公用的路径
-@RequiredArgsConstructor//lombork自动生成构造器，依赖注入
+@RequestMapping("/api/order")
+@RequiredArgsConstructor
 public class OrderController {
 
     private final RepairOrderService orderService;
@@ -42,11 +42,11 @@ public class OrderController {
                 //String fileName =image.getOriginalFilename();这样写不行，会导致覆盖
                 File dest = new File(uploadPath + File.separator + fileName);
 
-                if (!dest.getParentFile().exists()) {//目录不存在就创建目录
+                if (!dest.getParentFile().exists()) {
                     dest.getParentFile().mkdirs();
                 }
                 image.transferTo(dest);//保存图片
-                imageUrl = "/uploads/" + fileName; //前端访问路径
+                imageUrl = "/uploads/" + fileName;
             } catch (IOException e) {
                 e.printStackTrace();
                 return Result.error(500, "图片上传失败");
@@ -78,16 +78,21 @@ public class OrderController {
     }
 
     @GetMapping("/admin/list")
-    public Result<List<RepairOrder>> getAllOrders(@RequestParam(required=false)Integer status,@RequestAttribute("role") Integer role){
-        //管理员才能反问
-        if(role==null || role!= RoleConstant.ADMIN){
-            return Result.error(403,"无权限访问");
+    public Result<List<RepairOrder>> getAllOrders(@RequestParam(required = false) Integer status, @RequestParam(required = false) Integer priority, @RequestAttribute("role") Integer role) {
+        System.out.println("接收到参数：status=" + status + ", priority=" + priority);
+        if (role == null || role != RoleConstant.ADMIN) {
+            return Result.error(403, "无权限");
         }
         List<RepairOrder> orders;
-        if(status!=null){
-            orders=orderService.getOrdersByStatus(status);
-        }else{
-            orders=orderService.getAllOrders();
+        if(priority != null && status !=null){
+            orders = orderService.getOrdersByStatusAndPriority(status,priority);
+        }
+        else if (priority != null) {//wk了，忘记加else导致查询一直出错，无法保证两者同时查询
+            orders = orderService.getOrderByPriority(priority);
+        } else if (status != null) {
+            orders = orderService.getOrdersByStatus(status);
+        } else {
+            orders = orderService.getAllOrders();
         }
         return Result.success(orders);
     }

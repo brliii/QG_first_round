@@ -1,7 +1,6 @@
 package com.example.dormrepair.service;
 
 import com.example.dormrepair.entity.RepairOrder;
-
 import java.util.List;
 
 public interface RepairOrderService {
@@ -35,5 +34,8 @@ public interface RepairOrderService {
 
     //管理员按优先级查询保修单
     List<RepairOrder> getOrderByPriority(int priority);
+
+    //支持同时按状态和优先级筛选
+    List<RepairOrder> getOrdersByStatusAndPriority(int status, int priority);
 
 }

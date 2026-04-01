@@ -3,8 +3,8 @@ package com.example.dormrepair.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.dormrepair.entity.RepairOrder;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-
 import java.util.List;
 
 public interface RepairOrderMapper extends BaseMapper<RepairOrder> {
@@ -19,4 +19,8 @@ public interface RepairOrderMapper extends BaseMapper<RepairOrder> {
     //管理员根据优先级查询保修单
     @Select("SELECT * FROM repair_order WHERE priority=#{priority} ")
     List<RepairOrder> selectByPriority(int priority);
+
+    //同时按状态和优先级查询
+    @Select("SELECT * FROM repair_order WHERE status = #{status} AND priority = #{priority}")
+    List<RepairOrder> selectByStatusAndPriority(@Param("status") int status,@Param("priority")int priority);
 }

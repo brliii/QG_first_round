@@ -1,19 +1,19 @@
 package com.example.dormrepair.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.dormrepair.constant.OrderStatusConstant;
 import com.example.dormrepair.dao.RepairOrderMapper;
 import com.example.dormrepair.entity.RepairOrder;
 import com.example.dormrepair.service.RepairOrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class RepairOrderServiceImpl implements RepairOrderService {
 
-    private final RepairOrderMapper orderMapper;
+    private final RepairOrderMapper orderMapper;//注入了才可以调用方法
 
     //学生创建列表
     @Override
@@ -36,7 +36,7 @@ public class RepairOrderServiceImpl implements RepairOrderService {
         return orderMapper.selectByUserId(userId);
     }
 
-    //学生根据id获取单个保修单
+    //学生根据保修单id获取单个保修单
     @Override
     public RepairOrder getOrderById(int orderId) {
         return orderMapper.selectById(orderId);
@@ -138,4 +138,11 @@ public class RepairOrderServiceImpl implements RepairOrderService {
         int result = orderMapper.updateById(order);
         return result > 0;
     }
+
+    //同时按优先级和状态查询
+    @Override
+    public List<RepairOrder> getOrdersByStatusAndPriority(int status, int priority) {
+        return orderMapper.selectByStatusAndPriority(status,priority);
+    }
+
 }

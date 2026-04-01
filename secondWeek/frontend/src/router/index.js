@@ -20,7 +20,7 @@ const router = createRouter({
     routes
 })
 
-// 简单路由守卫：检查 token
+//简单路由守卫：检查 token
 router.beforeEach((to, from, next) => {
     const token = localStorage.getItem('token')
     if (to.meta.requiresAuth && !token) {

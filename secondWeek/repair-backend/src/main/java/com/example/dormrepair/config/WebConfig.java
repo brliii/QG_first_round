@@ -1,4 +1,4 @@
-//配置类，注册拦截器，放行登录/注册路径
+//配置类，注册拦截器，放行白名单。解决跨域请求问题。
 package com.example.dormrepair.config;
 
 import com.example.dormrepair.interceptor.AuthInterceptor;
@@ -25,11 +25,9 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/uploads/**").addResourceLocations("file:"+ uploadPath +"/");
     }
 
+    //解决跨域问题
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOriginPatterns("*")   // 允许所有来源
-                .allowedMethods("*")
-                .allowCredentials(true);
+        registry.addMapping("/**").allowedOriginPatterns("*").allowedMethods("*").allowCredentials(true);
     }
 }

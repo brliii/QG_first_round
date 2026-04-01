@@ -5,7 +5,6 @@ import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
 import java.security.Key;
 import java.util.Date;
 
@@ -16,7 +15,7 @@ public class JwtUtil {
     @Value("${jwt.expiration}")
     private Long duration;
 
-    private Key getSigningKey() {//签名密钥
+    private Key getSigningKey() {
         return Keys.hmacShaKeyFor(secret.getBytes());
     }
 
@@ -26,21 +25,21 @@ public class JwtUtil {
         return Jwts.builder().claim("userId", userId).claim("role", role).setIssuedAt(now).setExpiration(endDate).signWith(getSigningKey(), SignatureAlgorithm.HS256).compact();
     }
 
-    public Claims parseToken(String token) {//？
+    public Claims analyseToken(String token) {//？
         return Jwts.parserBuilder().setSigningKey(getSigningKey()).build().parseClaimsJws(token).getBody();
     }
 
-    public Integer getUserIdFromToken(String token) {
-        return parseToken(token).get("userId", Integer.class);
+    public Integer getUserIdByToken(String token) {
+        return analyseToken(token).get("userId", Integer.class);
     }
 
-    public Integer getRoleFromToken(String token) {
-        return parseToken(token).get("role", Integer.class);
+    public Integer getRoleByToken(String token) {
+        return analyseToken(token).get("role", Integer.class);
     }
 
     public boolean validateToken(String token) {
         try {
-            parseToken(token);
+            analyseToken(token);
             return true;
         } catch (JwtException | IllegalArgumentException e) {
             return false;

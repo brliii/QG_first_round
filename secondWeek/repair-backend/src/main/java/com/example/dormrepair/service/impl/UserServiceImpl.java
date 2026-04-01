@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor  // 自动生成包含所有 final 字段的构造器
 public class UserServiceImpl implements UserService {
 
-    //使用lombok
-    private final RepairUserMapper userMapper;//这也是依赖注入，可以不用注释@Autowired了，lombok会帮我们生成构造器来注入这个依赖。移除了手动 SqlSession 管理，保留业务逻辑和注释。
+    private final RepairUserMapper userMapper;//这也是依赖注入，可以不用注释@Autowired了，lombok会生成构造器来注入这个依赖。spring移除了手动 SqlSession 管理，保留业务逻辑和注释。
 
     @Override
     public boolean register(String name, String username, String password, String confirmPassword, int role) {
@@ -24,7 +23,6 @@ public class UserServiceImpl implements UserService {
         }
 
         //检查学号、工号格式
-        //validate方法在后面有定义
         if (!validateUsername(username, role)) {
             System.out.println("用户名格式不正确");
             return false;
@@ -63,7 +61,6 @@ public class UserServiceImpl implements UserService {
             return null;
         }
 
-        //验证密码
         //这个是bcrypt提供的检验方法
         if (BCrypt.checkpw(password, user.getPassword())) {
             return user;
@@ -75,23 +72,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean changePassword(int userId, String oldPassword, String newPassword) {
-        //根据id查询用户
         RepairUser user = userMapper.selectById(userId);
         if (user == null) {
             System.out.println("用户不存在");
             return false;
         }
 
-        //验证旧密码
         if (!BCrypt.checkpw(oldPassword, user.getPassword())) {
             System.out.println("旧密码错误");
             return false;
         }
 
-        //对新密码加密
         String hashedNewPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
-
-        //更新密码
         user.setPassword(hashedNewPassword);
         //这个是mp特有的方法，检查更新了没
         int result = userMapper.updateById(user);
@@ -100,7 +92,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public RepairUser getUserById(int userId) {
-        //直接用mp里的basemapper的selectbyid方法
         return userMapper.selectById(userId);
     }
 
@@ -125,7 +116,6 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        //判断是学生还是管理员，或者都不是
         if (role == RoleConstant.STUDENT) {
             //检查前缀3125/3225
             //感觉是苯蛋的写法，硬编码来的
@@ -133,7 +123,6 @@ public class UserServiceImpl implements UserService {
             char c2 = username.charAt(1);
             char c3 = username.charAt(2);
             char c4 = username.charAt(3);
-
             if (!(c1 == '3' && c2 == '1' && c3 == '2' && c4 == '5')
                     && !(c1 == '3' && c2 == '2' && c3 == '2' && c4 == '5')) {
                 return false;
@@ -161,7 +150,6 @@ public class UserServiceImpl implements UserService {
             }
         }
 
-        //所有检查都没问题
         return true;
     }
 }
