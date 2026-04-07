@@ -28,7 +28,7 @@
       <select v-model="order.newStatus" @change="updateStatus(order.id, order.newStatus)">
         <option v-for="(label, val) in statusMap" :value="val">{{ label }}</option>
       </select>
-      <button @click="deleteOrder(order.id)">删除</button>
+      <button @click="deleteOrder(order.id)" style="background-color: #ff4d4f; color: white; border: none; padding: 4px 8px; border-radius: 4px;">删除</button>
     </div>
 </template>
 

@@ -182,7 +182,7 @@ const changePassword = async () => {
     })
     if (res.code === 200) {
       alert('密码修改成功，下次登录请使用新密码')
-      // 清空输入框，关闭模态框
+      //清空输入框，关闭显示框
       oldPassword.value = ''
       newPassword.value = ''
       confirmPassword.value = ''

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81698bfc-ae07-48ce-90d9-eed64ef3cd58" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/AdminOrders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/AdminOrders.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/StudentHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/StudentHome.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +99,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="HTTP 请求.test | 学生登录（获取token）">
     <configuration name="test | 学生登录（获取token）" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/repair-backend/test.http" executionIdentifier="学生登录（获取token）" index="2" runType="运行单个请求">
       <method v="2" />
     </configuration>
@@ -140,7 +142,15 @@
       <workItem from="1774939687494" duration="9817000" />
       <workItem from="1774949584634" duration="19000" />
       <workItem from="1774954620780" duration="10396000" />
-      <workItem from="1775040611301" duration="5861000" />
+      <workItem from="1775040611301" duration="5965000" />
+      <workItem from="1775047100318" duration="1095000" />
+      <workItem from="1775113574808" duration="25000" />
+      <workItem from="1775114289210" duration="1004000" />
+      <workItem from="1775127653026" duration="4912000" />
+      <workItem from="1775205948194" duration="3368000" />
+      <workItem from="1775214791675" duration="5855000" />
+      <workItem from="1775400736513" duration="29000" />
+      <workItem from="1775479823958" duration="25000" />
     </task>
     <servers />
   </component>
